@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html_020_form</title>
+    <style>
+      div {
+        width: 600px;
+        margin-top: 10px;
+      }
+
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+
+      table {
+        width: 600px;
+      }
+
+      caption {
+        text-align: left;
+        font-weight: bolder;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <table>
+        <caption>
+          기본정보 입력
+        </caption>
+        <tbody>
+          <tr>
+            <td>이름</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>아이디</td>
+            <td>
+              <input type="text" />&nbsp;<input
+                type="button"
+                value="중복체크"
+                onclick="idck('이미 사용중인 아이디 입니다.')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>비밀번호</td>
+            <td><input type="password" /></td>
+          </tr>
+          <tr>
+            <td>비밀번호확인</td>
+            <td><input type="password" /></td>
+          </tr>
+          <tr>
+            <td>이메일</td>
+            <td>
+              <input type="text" />@
+
+              <select name="g_email">
+                <option>선택해주세요</option>
+
+                <option value="naver.com">naver.com</option>
+                <option value="daum.net">daum.net</option>
+                <option value="nate.com">nate.com</option>
+                <input type="text" />
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>연락처</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>메일수신여부</td>
+            <td>
+              <input type="radio" name="email" value="ok" />
+              받음
+              <input type="radio" name="email" value="no" />
+              받지않음
+            </td>
+          </tr>
+          <tr>
+            <td>관심분야</td>
+            <td>
+              <input type="checkbox" name="group" value="java" /> 자바
+              <input type="checkbox" name="group" value="c++" /> C++
+              <input type="checkbox" name="group" value="phython" /> 파이썬
+              <input type="checkbox" name="group" value="android" />
+              안드로이드
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <div>
+        <input type="reset" value="취소" onclick="alert('취소되었습니다.')" />
+        <input type="submit" value="저장" onclick="alert('저장되었습니다.')" />
+      </div>
+    </form>
+  </body>
+</html>
